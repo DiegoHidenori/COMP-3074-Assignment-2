@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MainScreen from './MainScreen';
@@ -12,7 +12,8 @@ const Tab = createBottomTabNavigator();
 function MainStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name = 'Main' component = {MainScreen} />
+      <Stack.Screen name="Main" component={MainScreen} options={{ title: 'Main Screen' }} />
+      <Stack.Screen name="About" component={AboutScreen} options={{ title: 'About Screen' }} />
     </Stack.Navigator>
   );
 }
@@ -20,7 +21,7 @@ function MainStack() {
 function AboutStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name = 'About' component = {AboutScreen} />
+      <Stack.Screen name="About" component={AboutScreen} />
     </Stack.Navigator>
   );
 }

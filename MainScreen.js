@@ -3,9 +3,9 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 export default function MainScreen({ navigation }) {
-    const [baseCurrency, setBaseCurrency] = useState('CAD'); // Default: CAD
-    const [destinationCurrency, setDestinationCurrency] = useState('USD'); // Default: USD
-    const [amount, setAmount] = useState('1'); // Default: 1
+    const [baseCurrency, setBaseCurrency] = useState('CAD');
+    const [destinationCurrency, setDestinationCurrency] = useState('USD');
+    const [amount, setAmount] = useState('1');
     const [convertedAmount, setConvertedAmount] = useState(null);
     const [error, setError] = useState('');
 
@@ -57,30 +57,28 @@ export default function MainScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-        justifyContent: 'center',
-    },
-    label: {
-        fontSize: 16,
-        marginVertical: 5,
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: '#ccc',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 10,
-    },
-    result: {
-        marginTop: 20,
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
-    error: {
-        marginTop: 20,
-        fontSize: 16,
-        color: 'red',
-    },
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+  },
+  text: {
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 15,
+  },
+  button: {
+    marginBottom: 15,
+  },
+  error: {
+    marginTop: 20,
+    fontSize: 16,
+    color: 'red',
+  },
 });
